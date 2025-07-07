@@ -94,7 +94,6 @@ function App() {
                 <div className={`h-1/2 w-full md:w-1/2 flex flex-col gap-y-3`}>
                     <div className={`text-xl font-montserrat font-semibold ${darkmode ? "text-white" : "text-black"}`}>User Query </div>
                     <textarea onChange={(e) => setInput(e.target.value)} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} className={`bg-transparent px-3 py-2 outline-none font-montserrat min-h-[280px] max-h-[280px] w-full rounded-lg border-[2px] ${darkmode ? "text-white" : "text-black"} ${darkmode ? "border-neutral-700/70" : "border-gray-300"}`}></textarea>
-                    {/* <div className={`self-end bg-white px-6 py-3 font-montserrat rounded-lg font-semibold ${darkmode ? "text-black" : "text-white"} ${darkmode ? "bg-white" : "bg-black"} cursor-pointer`} onClick={() => setInput("")}>Remove</div> */}
                 </div>
 
                 <div className={`h-full w-full md:w-1/2`}>
