@@ -99,25 +99,20 @@ function App() {
                 <div className={`h-full w-full md:w-1/2`}>
                     <div className={`text-xl font-montserrat font-semibold mb-3 ${darkmode ? "text-white" : "text-black"}`}>Token count - {totaltokens}</div>
                     <div className="w-full flex flex-col gap-4">
-                        <div style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} className={`${darkmode ? "text-white" : "text-black"} overflow-scroll px-3 py-2 font-mono h-[280px] w-full rounded-lg border-[2px] ${darkmode ? "border-neutral-700/70" : "border-gray-300"} `}>
-                            {decoded.map((e, i) => (
-                                <span key={i} className="px-1 font-mono">{e}</span>
-                            ))}
-                        </div>
                         <div
-                            className={`
-                            ${darkmode ? "text-white" : "text-black"} 
-                            overflow-x-auto overflow-y-auto
-                            px-2 py-3 
-                            h-[280px] w-full 
-                            rounded-lg border-[2px] 
-                            ${darkmode ? "border-neutral-700/70" : "border-gray-300"} 
-                            flex flex-wrap
-                            items-start
-                            `}
-                        >
-                            {nums.map((e, i) => (
-                                <span key={i} className="px-2 font-mono break-words">{e}</span>
+                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            className={`${darkmode ? "text-white" : "text-black"} 
+                                overflow-auto 
+                                px-3 py-2 
+                                h-[580px] w-full 
+                                rounded-lg border-[2px] 
+                                ${darkmode ? "border-neutral-700/70" : "border-gray-300"}
+                                font-mono text-sm`}
+                            >
+                            {nums.map((num, i) => (
+                                <div key={i} className="px-1 py-0.5 font-semibold">
+                                    <span>{num}</span> - <span>{decoded[i]}</span>
+                                </div>
                             ))}
                         </div>
                     </div>
