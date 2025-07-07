@@ -96,15 +96,15 @@ function App() {
                     <textarea onChange={(e) => setInput(e.target.value)} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} className={`bg-transparent px-3 py-2 outline-none font-montserrat min-h-[280px] max-h-[280px] w-full rounded-lg border-[2px] ${darkmode ? "text-white" : "text-black"} ${darkmode ? "border-neutral-700/70" : "border-gray-300"}`}></textarea>
                 </div>
 
-                <div className={`h-full w-full md:w-1/2`}>
+                <div className={`h-[90%] w-full md:w-1/2`}>
                     <div className={`text-xl font-montserrat font-semibold mb-3 ${darkmode ? "text-white" : "text-black"}`}>Token count - {totaltokens}</div>
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="h-full w-full flex flex-col gap-4">
                         <div
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                             className={`${darkmode ? "text-white" : "text-black"} 
                                 overflow-auto 
                                 px-3 py-2 
-                                h-[580px] w-full 
+                                h-full w-full 
                                 rounded-lg border-[2px] 
                                 ${darkmode ? "border-neutral-700/70" : "border-gray-300"}
                                 font-mono text-sm`}
