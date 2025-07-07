@@ -105,17 +105,19 @@ function App() {
                             ))}
                         </div>
                         <div
-                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-                            className={`${darkmode ? "text-white" : "text-black"} 
-                            overflow-scroll 
+                            className={`
+                            ${darkmode ? "text-white" : "text-black"} 
+                            overflow-x-auto overflow-y-auto
                             px-2 py-3 
                             h-[280px] w-full 
                             rounded-lg border-[2px] 
                             ${darkmode ? "border-neutral-700/70" : "border-gray-300"} 
-                            flex flex-wrap`}
+                            flex flex-wrap
+                            items-start
+                            `}
                         >
                             {nums.map((e, i) => (
-                                <span key={i} className="px-2 font-mono">{e}</span>
+                                <span key={i} className="px-2 font-mono break-words">{e}</span>
                             ))}
                         </div>
                     </div>
